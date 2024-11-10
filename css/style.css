@@ -196,9 +196,9 @@ h1, h2, h3, h4, h5, h5 {
     align-items: center;
     column-gap: 12px;
 }
+
 .swiper-container {
     width: 100%;
-    max-width: 360px;
     overflow: hidden;
 }
 
@@ -207,10 +207,10 @@ h1, h2, h3, h4, h5, h5 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 200px;
     border-radius: 10px;
     color: #FFFFFF;
     text-transform: uppercase;
+    width: 500px;
 }
 
 .swiper-slide__title {
@@ -257,7 +257,7 @@ h1, h2, h3, h4, h5, h5 {
     }
 
     .swiper-slide {
-        width: 190px;
+        width: 300px;
     }
 
     .gp7__main {
@@ -280,6 +280,10 @@ h1, h2, h3, h4, h5, h5 {
 @media (max-width: 480px) {
     .gp7-form__title {
         letter-spacing: 1.8px;
+    }
+
+    .swiper-slide {
+        width: 190px;
     }
 }
 
