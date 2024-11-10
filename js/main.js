@@ -42,12 +42,9 @@ const swiper = new Swiper('.swiper-container', {
         modifier: 1,         // Multiplier for rotating, stretching, and depth
         slideShadows: true,  // Enable shadows for depth
     },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
     autoplay: {               // Enable autoplay
-        delay: 4000,
+        delay: 2000,
         disableOnInteraction: false,
     },
+    speed: 800,               // Adjust transition speed (in ms)
 });
