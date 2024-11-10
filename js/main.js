@@ -3,8 +3,8 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 
     const form = e.target;
     const formData = new FormData(form);
-
     const submitButton = document.getElementById('submitButton');
+    
     submitButton.disabled = true;
     submitButton.innerText = 'Submitting...';
 
@@ -15,8 +15,18 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
+                // Show success message
                 document.getElementById('gp7-form-message').style.display = 'block';
-                form.remove();
+                
+                // Temporarily hide the form
+                form.style.display = 'none';
+
+                // Reset and show the form again after 5 seconds
+                setTimeout(() => {
+                    form.reset();
+                    form.style.display = 'flex';
+                    document.getElementById('gp7-form-message').style.display = 'none';
+                }, 3000);
             } else {
                 alert('There was an error. Please try again.');
             }
@@ -27,6 +37,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         })
         .finally(() => {
             submitButton.disabled = false;
+            submitButton.innerText = 'Submit';
         });
 });
 
