@@ -87,6 +87,7 @@ h1, h2, h3, h4, h5, h5 {
     top: 15px;
     margin: 0 auto;
     animation: rotate 40s linear infinite;
+    opacity: .6;
 }
 
 .gp7-form {
